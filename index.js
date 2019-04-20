@@ -3,23 +3,22 @@ const $root = document.querySelector("#root");
 const $wrap = document.createElement("div");
 
 async function buscaDados() {
-  const response =  await fetch("https://jsonplaceholder.typicode.com/todos/1")
+  const response =  await fetch("https://jsonplaceholder.typicode.com/todos/")
   const json = await response.json();  
   console.log(json);
-  return `${json.title} e o id é  ${json.id}`
-  // .then(response => response.json())
-    // .then(json => {
-    //   //TODO criar um OBJ que retorna a promisse
-    //     console.log(json.title + json.completed);
-    //   //title + userid
-    //   return json.title + json.completed})
-    // .catch(err => console.log("erro de carregamento"));
+  return json;
+  
 };
 
 async function recebeDados(){
 var teste = await buscaDados();
-$wrap.innerHTML = `<p> ${teste} </p>`;
-console.log(`${teste} `);
+const saida = teste.map( todo => {
+  //console.log(todo)
+  return `<p> ${todo.title} </p><br>`
+})
+console.log(saida);
+$wrap.innerHTML = saida.join('');
+//console.log(`${teste} `);
 }
 
 var saida = recebeDados();
