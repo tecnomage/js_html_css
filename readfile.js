@@ -1,0 +1,2 @@
+//Ler arquivo
+require('fs');
