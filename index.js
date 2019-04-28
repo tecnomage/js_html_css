@@ -4,7 +4,7 @@ const $table = document.createElement("table");
 const $tblBody = document.createElement("tbody");
 
 //$wrap.appendChild($tblBody);
-
+//FAZER O MERGE
 async function buscaDados() {
   const response =  await fetch("https://jsonplaceholder.typicode.com/users/")
   const json = await response.json();  
