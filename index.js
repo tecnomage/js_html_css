@@ -13,6 +13,7 @@ async function buscaDados() {
   
 };
 
+//asdsa
 async function recebeDados(){
 var teste = await buscaDados();
 const saida = teste.map(user => {
