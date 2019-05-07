@@ -13,24 +13,27 @@ async function buscaDados() {
   
 };
 
-//asdsa
 async function recebeDados(){
-var teste = await buscaDados();
+const teste = await buscaDados();
 const saida = teste.map(user => {
-   console.log(user)
+   
   //TODO retornar username + compania + email + phone 
   //`<li>${user.name}</li>`
   let tr = document.createElement("tr");
-  //$tblBody.appendChild(tr);
+  $tblBody.appendChild(tr);
   var td = document.createElement("td")
   var texto = document.createTextNode(user.email)
   td.appendChild(texto);
+
   tr.appendChild(td)
+  
   //var cellText = document.createTextNode() 
 })
-console.log(saida)
+//console.log(saida)
+
 $table.appendChild($tblBody)
 $root.appendChild($table)
+console.log($table)
 //console.log(`${teste} `);
 }
 
