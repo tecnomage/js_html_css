@@ -17,6 +17,7 @@ function buildTable(data) {
     });
     thead.appendChild(headRow);
     table.appendChild(thead); 
+    
     data.forEach(function(el) {
       var tr = document.createElement("tr");
       for (var o in el) {  
