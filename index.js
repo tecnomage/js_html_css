@@ -47,7 +47,7 @@ async function recebeDados() {
     var tr = document.createElement("tr");
     for (var o in el) {
       var td = document.createElement("td");
-      console.log(el[o]);
+      //console.log(el[o]);
       td.appendChild(document.createTextNode(el[o]));
       tr.appendChild(td);
     }
